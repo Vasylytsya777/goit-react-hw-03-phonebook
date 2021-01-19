@@ -1,0 +1,38 @@
+.form {
+  padding: 10px;
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+}
+.inputName,
+.inputNumber {
+  display: block;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  font-size: 25px;
+  text-align: left;
+  outline: none;
+  border: 1px solid grey;
+}
+.label {
+  margin-top: 10px;
+  font-weight: 500;
+}
+.buttonAddContacts {
+  margin-left: 10px;
+  width: 150px;
+  height: 30px;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 15px auto;
+  background-color: white;
+}
+.buttonAddContacts:hover,
+.buttonAddContacts:focus {
+  border: 2px solid grey;
+  box-shadow: 1px 1px 10px 1px grey;
+}
