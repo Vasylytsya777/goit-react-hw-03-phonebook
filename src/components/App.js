@@ -16,6 +16,20 @@ export default class App extends Component {
     filter: "",
   };
 
+  componentDidMount() {
+    const persistedContacts = localStorage.getItem("contacts");
+    if (persistedContacts) {
+      this.setState({
+        contacts: JSON.parse(persistedContacts),
+      });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.contacts !== this.state.contacts) {
+      localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
+    }
+  }
   addContact = (newContacts) => {
     const contact = {
       id: uuidv4(),
