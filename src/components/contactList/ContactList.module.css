@@ -2,13 +2,23 @@
   margin-bottom: 20px;
 }
 .list {
-  padding-left: 400px;
+  display: inline-block;
+  align-items: stretch;
 }
+
 .listItem {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  border: 2px solid gray;
+  padding: 15px;
 }
+.listItem:hover {
+  border: 2px solid grey;
+  box-shadow: 1px 1px 10px 1px grey;
+}
+
 .contactText {
   display: inline-block;
   margin-left: 20px;
