@@ -3,9 +3,6 @@ import PropTypes from "prop-types";
 import styles from "./Filter.module.css";
 
 const Filter = ({ filter, onHandleFilter }) => {
-  const onFilterChange = (e) => {
-    onHandleFilter(e.target.value);
-  };
   return (
     <div className={styles.wrapper}>
       <h3 className={styles.inputName}>Find contacts by name</h3>
@@ -15,15 +12,21 @@ const Filter = ({ filter, onHandleFilter }) => {
         name="filter"
         value={filter}
         placeholder="Filter Name"
-        onChange={onFilterChange}
+        onChange={onHandleFilter}
       ></input>
     </div>
   );
 };
 
-export default Filter;
-
 Filter.propTypes = {
   onHandleFilter: PropTypes.func.isRequired,
-  filter: PropTypes.string.isRequired,
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
 };
+
+export default Filter;
