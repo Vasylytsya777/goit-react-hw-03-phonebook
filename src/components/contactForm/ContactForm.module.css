@@ -9,8 +9,9 @@
   width: 300px;
   height: 30px;
   margin-bottom: 10px;
-  font-size: 25px;
-  text-align: center;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 5px;
   outline: none;
   border: 1px solid grey;
 }
@@ -32,5 +33,5 @@
 .buttonAddContacts:hover,
 .buttonAddContacts:focus {
   border: 2px solid grey;
-  box-shadow: 1px 1px 10px 1px grey;
+  background-color: grey;
 }

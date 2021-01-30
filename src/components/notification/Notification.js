@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Styles from "./Notification.module.css";
 
-export const Notification = ({ message }) => {
+export const Notification = ({ text }) => {
   return (
     <div className={Styles.NotificationWrapper}>
-      {`${message} is already in Contacts`}
+      {`${text} is already in Contacts`}
     </div>
   );
 };
